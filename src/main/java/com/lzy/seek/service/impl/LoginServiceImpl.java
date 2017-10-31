@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import com.lzy.seek.dao.LoginDao;
+import com.lzy.seek.entity.SeekUser;
 import com.lzy.seek.entity.User;
 import com.lzy.seek.service.LoginService;
 import com.lzy.seek.utils.AESCoder;
@@ -37,20 +38,21 @@ public class LoginServiceImpl implements LoginService {
 	 * @see com.lzy.parttime.service.LoginService#doLogin(com.lzy.parttime.entity.User)
 	 */
 	@Override
-	public Result doLogin(User user) {
+	public Result doLogin(String phone, String password) {
 		Result result = new Result();
 		result.setMsg("加载成功");
 		result.setCode(CodeConstant.CODE1000);
 		Map<String, Object> params = new HashMap<>();
-		params.put("userAccount", user.getUserAccount());
+		params.put("phone",phone);
+		params.put("password",phone);
 		try {
-			User verifyUser = loginDao.getLoginUser(params);
+			SeekUser verifyUser = loginDao.getLoginUser(params);
 			if(verifyUser==null){
 				result.setCode(CodeConstant.CODE201);
 				result.setMsg("用户不存在");
 				return result;
 			}
-			if(!new String(AESCoder.decode(verifyUser.getPwd())).equals(user.getPwd())){
+			if(!new String(AESCoder.decode(verifyUser.getPassword())).equals(password)){
 				result.setCode(CodeConstant.CODE202);
 				result.setMsg("账户密码不匹配，请重新输入");
 				return result;
@@ -58,8 +60,7 @@ public class LoginServiceImpl implements LoginService {
 		} catch (Exception e) {
 			result.setCode(CodeConstant.CODE200);
 			result.setMsg("加载失败");
-			log.error("\r\n 登录验证 ： errorcode=" + ErrorCode.geterrocode(this)+",user:"+user
-			+ "  \r\n" + e + "\r\n\r\n");
+			log.error("\r\n 登录验证 ： errorcode=" + ErrorCode.geterrocode(this)+ "  \r\n" + e + "\r\n\r\n");
 			e.printStackTrace();
 		}
 		return result;

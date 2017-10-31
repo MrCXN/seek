@@ -3,21 +3,18 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--登录 -->
-<mapper namespace="com.lzy.parttime.dao.LoginDao">
+<mapper namespace="com.lzy.seek.dao.LoginDao">
 	<!-- 登录验证 -->
-	<select id="getLoginUser" parameterType="Map" resultType="user">
+	<select id="getLoginUser" parameterType="Map" resultType="seekUser">
 		SELECT
 			u.id,
-			u.pwd,
-			u.userNm,
-			u.sex,
-			u.phone,
-			u.userAccount,
-			u.addTime
+			u.password,
+			u.seekNm,
+			u.phone
 		FROM
-			USER u
+			seekuser u
 		WHERE
-			u.userAccount = #{userAccount} and u.delFlag=0 
+			u.phone = #{phone} and u.delFlag=0 
 		LIMIT 1
 	</select>
 	

@@ -17,6 +17,6 @@ public interface LoginService {
 	 * @TODO: [登录验证]
 	 * @createTime:2017年10月20日下午5:16:35
 	 */
-	Result doLogin(User user);
+	Result doLogin(String phone, String password);
 	
 }

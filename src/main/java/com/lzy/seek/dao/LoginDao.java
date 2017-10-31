@@ -2,7 +2,7 @@ package com.lzy.seek.dao;
 
 import java.util.Map;
 
-import com.lzy.seek.entity.User;
+import com.lzy.seek.entity.SeekUser;
 
 /**
  * 
@@ -20,6 +20,6 @@ public interface LoginDao {
 	 * @return: user
 	 * @createTime:2017年10月23日上午9:20:37
 	 */
-	User getLoginUser(Map<String, Object> params);
+	SeekUser getLoginUser(Map<String, Object> params);
 
 }

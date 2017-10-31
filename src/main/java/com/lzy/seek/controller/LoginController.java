@@ -1,17 +1,13 @@
 package com.lzy.seek.controller;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -46,9 +42,12 @@ public class LoginController {
 	 * @createTime:2017年10月20日下午4:59:36
 	 */
 	@RequestMapping(value = "/doLogin")
-	public Map<String, Object> loginIndex(User user ) {
+	public Map<String, Object> loginIndex(HttpServletRequest request) {
+		String phone = request.getParameter("phone");
+		String password = request.getParameter("password");
+		
 		Map<String, Object> map = new HashMap<>();
-		Result result =  loginService.doLogin(user);
+		Result result =  loginService.doLogin(phone,password);
 		return CheckUtil.returnResult(map,result.getCode(), result.getMsg(), "");
 	}
 	
