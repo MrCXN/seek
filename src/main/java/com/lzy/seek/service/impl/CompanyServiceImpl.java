@@ -1,6 +1,5 @@
 package com.lzy.seek.service.impl;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,13 +12,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.lzy.seek.dao.CompanyDao;
 import com.lzy.seek.entity.Company;
-import com.lzy.seek.entity.User;
 import com.lzy.seek.service.CompanyService;
-import com.lzy.seek.utils.AESCoder;
 import com.lzy.seek.utils.CodeConstant;
-import com.lzy.seek.utils.DateUtil;
 import com.lzy.seek.utils.ErrorCode;
-import com.lzy.seek.utils.Result;
 
 /**
  * 
@@ -61,6 +56,4 @@ public class CompanyServiceImpl implements CompanyService {
 		}
 		return map;
 	}
-
-	
 }

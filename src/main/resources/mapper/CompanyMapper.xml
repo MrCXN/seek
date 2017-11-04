@@ -11,7 +11,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			c.`name`,
 			c.addTime,
 			c.introduce,
-			c.type
+			c.type,
+			c.imgUrl
 		FROM
 			`company` c
 		WHERE

@@ -53,12 +53,40 @@ public class LoginController {
 	
 	/**
 	 * 
+	 * @TODO: [注册]
+	 * @param request
+	 * @return: 
+	 * @createTime:2017年11月4日下午5:55:36
+	 */
+	@RequestMapping(value = "/register")
+	public Map<String, Object> register(HttpServletRequest request) {
+		String phone = request.getParameter("phone");
+		String password = request.getParameter("password");
+		String seekNm = request.getParameter("seekNm");
+		
+		Map<String, Object> map = new HashMap<>();
+		Result result =  loginService.register(phone,password,seekNm);
+		return CheckUtil.returnResult(map,result.getCode(), result.getMsg(), "");
+	}
+	
+	/**
+	 * 
 	 * @TODO: [登录首页]
 	 * @createTime:2017年10月23日下午2:38:00
 	 */
 	@RequestMapping(value = "/index" )
 	public ModelAndView loginIndex(){
 		return new ModelAndView("index");
+	}
+	
+	/**
+	 * 
+	 * @TODO: [注册首页]
+	 * @createTime:2017年10月23日下午2:38:00
+	 */
+	@RequestMapping(value = "/registerIndex" )
+	public ModelAndView registerIndex(){
+		return new ModelAndView("register");
 	}
 	
 	/**

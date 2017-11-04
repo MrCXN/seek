@@ -22,4 +22,12 @@ public interface LoginDao {
 	 */
 	SeekUser getLoginUser(Map<String, Object> params);
 
+	/**
+	 * 
+	 * @TODO: [注册]
+	 * @param params: 
+	 * @createTime:2017年11月4日下午6:00:49
+	 */
+	void register(Map<String, Object> params);
+
 }

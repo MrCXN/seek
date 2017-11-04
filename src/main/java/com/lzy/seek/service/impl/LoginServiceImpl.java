@@ -44,7 +44,7 @@ public class LoginServiceImpl implements LoginService {
 		result.setCode(CodeConstant.CODE1000);
 		Map<String, Object> params = new HashMap<>();
 		params.put("phone",phone);
-		params.put("password",phone);
+		params.put("password",password);
 		try {
 			SeekUser verifyUser = loginDao.getLoginUser(params);
 			if(verifyUser==null){
@@ -61,6 +61,31 @@ public class LoginServiceImpl implements LoginService {
 			result.setCode(CodeConstant.CODE200);
 			result.setMsg("加载失败");
 			log.error("\r\n 登录验证 ： errorcode=" + ErrorCode.geterrocode(this)+ "  \r\n" + e + "\r\n\r\n");
+			e.printStackTrace();
+		}
+		return result;
+	}
+
+	/*
+	 * @TODO: [注册]
+	 * @下午5:59:14
+	 * @see com.lzy.seek.service.LoginService#register(java.lang.String, java.lang.String, java.lang.String)
+	 */
+	@Override
+	public Result register(String phone, String password, String seekNm) {
+		Result result = new Result();
+		result.setMsg("加载成功");
+		result.setCode(CodeConstant.CODE1000);
+		Map<String, Object> params = new HashMap<>();
+		params.put("phone",phone);
+		params.put("password",AESCoder.encode(password.getBytes()));
+		params.put("seekNm",seekNm);
+		try {
+			loginDao.register(params);
+		} catch (Exception e) {
+			result.setCode(CodeConstant.CODE200);
+			result.setMsg("加载失败");
+			log.error("\r\n 注册失败 ： errorcode=" + ErrorCode.geterrocode(this)+ "  \r\n" + e + "\r\n\r\n");
 			e.printStackTrace();
 		}
 		return result;

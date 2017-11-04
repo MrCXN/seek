@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.lzy.seek.entity.Advertising;
-import com.lzy.seek.entity.Company;
 import com.lzy.seek.service.AdvertisingService;
 import com.lzy.seek.utils.CheckUtil;
 import com.lzy.seek.utils.Result;

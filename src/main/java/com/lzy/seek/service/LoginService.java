@@ -1,6 +1,5 @@
 package com.lzy.seek.service;
 
-import com.lzy.seek.entity.User;
 import com.lzy.seek.utils.Result;
 
 /**
@@ -18,5 +17,16 @@ public interface LoginService {
 	 * @createTime:2017年10月20日下午5:16:35
 	 */
 	Result doLogin(String phone, String password);
+
+	/**
+	 * 
+	 * @TODO: [注册]
+	 * @param phone
+	 * @param password
+	 * @param seekNm
+	 * @return: 
+	 * @createTime:2017年11月4日下午5:58:29
+	 */
+	Result register(String phone, String password, String seekNm);
 	
 }
