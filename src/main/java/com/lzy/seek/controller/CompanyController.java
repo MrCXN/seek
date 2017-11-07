@@ -51,4 +51,12 @@ public class CompanyController {
 		Map<String, Object> map = companyService.findCompanyList(name);
 		return map;
 	}
+	/**
+	 * @TODO: [公司对应的广告]
+	 * @createTime:2017年10月23日下午3:30:09
+	 */
+	@RequestMapping(value="/advertisingIndex")
+	public ModelAndView advertisingIndex(){
+		return new ModelAndView("jobs");
+	}
 }
