@@ -98,7 +98,7 @@ body, button, input, select, textarea {
 .cart-table-th, .td-sum{display: block;}
 .th.th-op,.list-change{display: none;}
 
-.item-content{overflow: visible;height:115px ;}
+.item-content{overflow: visible;height:60px ;}
 .bundle-hd{border-bottom: #CCC 1px dotted;padding:5px 0px;height:auto;overflow: hidden;background:#eee;} 
 .bundle-hd .bd-promos {	margin-left: 35px;}
 .td.td-amount .sl{width:auto;margin-right:0 ;} 

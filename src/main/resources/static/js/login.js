@@ -1,8 +1,5 @@
 $(document).ready(function() {
 	$(document).on("click", "#login", login);
-	
-	//$(document).on("click", "#relSure", relSure);// 确定选择一个职务
-	
 });
 
 
@@ -24,6 +21,9 @@ function login() {
 		password : password
 	}, function(data) {
 		if (data.code == 1000) {// 单角色
+			var data = data.data;
+			 localStorage.setItem("seekNm",data.seekNm);
+			 localStorage.setItem("seekPhone",data.phone);
 			goMain();// 跳转主画面
 		}else {
 			alert(data.msg);

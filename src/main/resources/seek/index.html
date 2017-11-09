@@ -23,10 +23,10 @@
 		<!--顶部导航条 -->
 		<div class="am-container header">
 			<ul class="message-l">
-				<div class="topMessage">
+				<div class="topMessage" id="ifLogin">
 					<div class="menu-hd">
-						<a href="#" target="_top" class="h">请登录</a>
-						<a href="#" target="_top">免费注册</a>
+						<a href="../login" target="_top" class="h">请登录</a>
+						<a href="../registerIndex" target="_top">免费注册</a>
 					</div>
 				</div>
 			</ul>
@@ -38,7 +38,7 @@
 				</div>
 				<div class="topMessage my-shangcheng">
 					<div class="menu-hd MyShangcheng">
-						<a href="#" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a>
+						<a target="_top" id="exit"><i class="am-icon-user am-icon-fw"></i>退出</a>
 					</div>
 				</div>
 			</ul>
@@ -224,14 +224,14 @@
 		<div class="theme-popover-mask"></div>
 
 	</body>
-	<!-- 餐饮中心物料模板 -->
+	<!-- 模板 -->
 	<script id="companyListTmpl" type="text/x-jquery-tmpl">
 		<li id="company" companyId="{{= id}}">
 			<div class="i-pic limit">
-				<img src="/{{= imgUrl}}" />
-				<p class="title fl">{{= name}}</p>
+				<img src="{{= imgUrl}}" />
+				<p class="title fl">简介:{{= introduce}}</p>
 				<p class="price fl">
-					<b>{{= introduce}}</b>
+					<b>公司名称:{{= name}}</b>
 				</p>
 			</div>
 	    </li>

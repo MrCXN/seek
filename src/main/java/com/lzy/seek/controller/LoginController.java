@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.lzy.seek.entity.User;
 import com.lzy.seek.service.LoginService;
 import com.lzy.seek.utils.CheckUtil;
 import com.lzy.seek.utils.Result;
@@ -33,6 +32,12 @@ public class LoginController {
 	@RequestMapping("/")
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView();
+		mv.setViewName("index");
+		return mv;
+	}
+	@RequestMapping("login")
+	public ModelAndView login() {
+		ModelAndView mv = new ModelAndView();
 		mv.setViewName("login");
 		return mv;
 	}
@@ -48,7 +53,7 @@ public class LoginController {
 		
 		Map<String, Object> map = new HashMap<>();
 		Result result =  loginService.doLogin(phone,password);
-		return CheckUtil.returnResult(map,result.getCode(), result.getMsg(), "");
+		return CheckUtil.returnResult(map,result.getCode(), result.getMsg(), result.getData());
 	}
 	
 	/**

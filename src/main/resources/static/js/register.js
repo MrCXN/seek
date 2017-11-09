@@ -46,5 +46,5 @@ function register() {
 
 // 跳转主画面
 function goLogin() {
-	window.location.href = "/";
+	window.location.href = "../login";
 }

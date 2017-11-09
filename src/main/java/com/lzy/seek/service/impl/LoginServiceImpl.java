@@ -57,6 +57,7 @@ public class LoginServiceImpl implements LoginService {
 				result.setMsg("账户密码不匹配，请重新输入");
 				return result;
 			}
+			result.setData(verifyUser);
 		} catch (Exception e) {
 			result.setCode(CodeConstant.CODE200);
 			result.setMsg("加载失败");
