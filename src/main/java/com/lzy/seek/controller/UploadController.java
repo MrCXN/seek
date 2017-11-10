@@ -1,7 +1,6 @@
 package com.lzy.seek.controller;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;

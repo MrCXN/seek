@@ -58,7 +58,6 @@ public class AdvertisingController {
 	 */
 	@RequestMapping(value = "/successIndex" )
 	public ModelAndView successIndex(){
-		ModelAndView andView= new ModelAndView();
 		return new ModelAndView("success");
 	}
 }
