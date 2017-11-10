@@ -28,6 +28,7 @@ public class UploadController {
 			String newName = uuid + "." + suffix;
 			
 			long size = pic.getSize();
+			//限制图片的大小
 			if(size>=1048576){
 				jsonObject.put("msg", "图片过大");
 				jsonObject.put("code", 500); // 保存图片地址
