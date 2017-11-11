@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.lzy</groupId>
-	<artifactId>parttime</artifactId>
+	<artifactId>seek</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>parttime</name>
-	<description>part time job</description>
+	<name>seek</name>
+	<description>seek</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

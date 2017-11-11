@@ -12,9 +12,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 @MapperScan("com.lzy.seek.dao")
-public class ParttimeApplication {
+public class SeekApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ParttimeApplication.class, args);
+		SpringApplication.run(SeekApplication.class, args);
 	}
 }
