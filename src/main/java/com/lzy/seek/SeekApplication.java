@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * 
  * @author 李兆阳
- * @description : [springBoot启动入口]
+ * @description : [seek启动入口]
  *
  * @时间: 2017年10月19日 上午10:59:36
  */
