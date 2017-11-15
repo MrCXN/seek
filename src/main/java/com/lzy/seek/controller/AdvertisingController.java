@@ -16,6 +16,8 @@ import com.lzy.seek.service.AdvertisingService;
  * 
  * @author 李兆阳
  * @description : [广告controller层]
+ * 				springboot:快速开发,集成大量的技术,使用简单, 只需配置相应的文件即可使用,内置容器,直接运行main方法,即可运行整个
+ * 				项目
  *
  * @时间: 2017年10月19日 上午11:02:30
  */
