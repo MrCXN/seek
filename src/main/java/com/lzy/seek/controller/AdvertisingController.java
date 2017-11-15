@@ -19,6 +19,7 @@ import com.lzy.seek.service.AdvertisingService;
  * 				springboot:快速开发,集成大量的技术,使用简单, 只需配置相应的文件即可使用,内置容器,直接运行main方法,即可运行整个
  * 				项目
  * 				git命令提交单个文件
+ * 				git命令之diff,diff --caceh, diff HEAD
  *
  * @时间: 2017年10月19日 上午11:02:30
  */
