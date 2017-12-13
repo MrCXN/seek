@@ -40,6 +40,7 @@ public class AdvertisingController {
 		ModelAndView andView= new ModelAndView();
 		andView.addObject("msg1", "test");
 		model.addAttribute("msg","test1");
+		System.out.println("asdfasdf");
 		return new ModelAndView("advertising_Index");
 	}
 	
