@@ -33,6 +33,7 @@ public class CompanyController {
 	 */
 	@RequestMapping(value = "/companyIndex" )
 	public ModelAndView companyIndex(){
+		System.out.println(123);
 		return new ModelAndView("company_Index");
 	}
 	
