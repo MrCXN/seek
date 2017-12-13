@@ -15,7 +15,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SeekApplication {
 
 	/**
-	 * a
+	 * test head
 	 * @TODO: [run as main方法就能执行]
 	 * @param args: 
 	 * @createTime:2017年12月13日下午6:07:46
